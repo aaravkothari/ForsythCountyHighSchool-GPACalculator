@@ -1,7 +1,7 @@
-# Intro to Programming - Denmark High School GPA Calculator
+# Forsyth County High School GPA Calculator
 
 ## Description
-The Denmark High School GPA Calculator is a program built with Django that calculates the GPA for Denmark High School students.
+The Forsyth County High School GPA Calculator is a program built with Django that calculates the GPA for Fosyth County High School students.
 
 ## Installation
 To install and run the GPA calculator, follow these steps:

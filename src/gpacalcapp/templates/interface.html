@@ -1,0 +1,1342 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Instructions Container -->
+<div class="collapse-show" id="instructions_container">
+
+    <!-- Introduction and Toggle Button Container -->
+    <div class="container  border border-primary bg-primary bg-opacity-10 rounded-4 pt-4" style="width: 50.5%;">
+        <div class="row justify-content-center pb-3" id="instructions">
+            <button class="btn col-7 rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#guide_view">
+                <h1 class="text-center">Instruction Guide</h1>
+            </button>
+        </div>
+    </div>
+
+    <!-- Guide Content Container -->
+    <div class="container collapse border border-primary bg-primary bg-opacity-10 rounded-4 mt-2" style="width: 50.5%;" id="guide_view">
+        <div class="row mx-2  pb-2">
+            <!-- Navigation for Guide Contents -->
+            <div class="col-4">
+                <!-- Sidebar Navigation for Guide Contents -->
+                <div class="row overflow-auto" style="max-height: 20rem; overflow: auto;">
+                    <!-- Navigation Links -->
+                    <nav id="guide_contents" class="h-100 flex-column align-items-stretch pe-4 border-end pt-2">
+                        <nav class="nav nav-pills flex-column">
+                            <!-- Main Navigation Links -->
+                            <a class="nav-link" href="#introduction">Introduction</a>
+                            <a class="nav-link" href="#instructions-1">Instructions</a>
+                                <nav class="nav nav-pills flex-column">
+                                    <!-- Instructions Sub-Navigation Links -->
+                                    <a class="nav-link ms-3 mt-1" href="#how_to_input_1-1">How to Input</a>
+                                    <a class="nav-link ms-3 my-1" href="#current_gpa_credits_1-2">Current GPA and Credits</a>
+                                    <a class="nav-link ms-3 my-1" href="#courses_1-3">Courses</a>
+                                    <a class="nav-link ms-3 my-1" href="#adding_courses_1-4">Adding Courses</a>
+                                    <a class="nav-link ms-3 my-1" href="#deleting_courses_1-5">Deleting Courses</a>
+                                    <a class="nav-link ms-3 my-1" href="#final_gpa_display_1-6">Final GPA Display</a>
+                                </nav>
+                        </nav>
+                    </nav>
+                </div>
+            </div>
+        
+            <!-- Main Content Area for Intructions Guide -->
+            <div class="col-8">
+                <div class="row overflow-auto" style="max-height: 20rem; overflow: auto;">
+                    <div data-bs-spy="scroll" data-bs-target="#guide_contents" data-bs-smooth-scroll="true" class="scrollspy-example-2 pt-2" tabindex="0" id="inner_instructions">
+                        <div id="introduction">
+
+                        <!-- Introduction Text -->
+                        <h4>Introduction</h4>
+                        <p>Hello! I'm Aarav Kothari, a member of the Denmark FBLA High School Chapter. Welcome to the guide for utilizing my Denmark High School's GPA Calculator. This tool is designed to help danes effortlessly calculate your weighted and unweighted GPAs based on the courses you've taken. If you have any specific questions, make sure to explore the Interactive Help Menu accessible through the navigation.</p>
+                        </div>
+
+                        <!-- Instructions Text Start Here -->
+                        <div id="instructions-1">
+                            <h4>Instructions</h4>
+                        </div>
+
+                            <!-- How to Input (Sub-Section 1.1) -->
+                            <div id="how_to_input_1-1">
+                                <h5>How to Input</h5>
+                                <ul>
+                                    <li>Keyboard: Use the keyboard to assist in inputting your current gpas and credits and with inputting your course names and grades. You are only permitted to enter numbers in numerical input forms.</li>
+                                    <li>Dropdowns: Click the dropdowns to select the correct value that aligns with your class type and credits.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Current GPA and Credits (Sub-Section 1.2) -->
+                            <div id="current_gpa_credits_1-2">
+                                <h5>Current GPA and Credits</h5>
+                                <p>To start of, view your transcript in infinite campus(accessible through the navigation) to see if you have your current weighted and unweighted GPA. If you do:</p>
+                                <ul>
+                                    <li>Input your current weighted and unweighted GPAs in the respective fields.</li>
+                                    <li>You are strongly advised to input your Current Total Credits Hours which is also stated in your transcript. This will ensure accurate GPA calculations as you go on to add courses in the calculator below.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Courses Input Info (Sub-Section 1.3) -->
+                            <div id="courses_1-3">
+                                <h5>Courses</h5>
+                                <p>Inputting courses into the calculator will automatically calculate and display your Final GPA.</p>
+                                <ul>
+                                    <li>Name: Input the name of the course to stay organized.</li>
+                                    <li>Type: Every high school class is either a regular class (4.0), AP class (5.0), or Dual Enrollment class (5.0). Make sure to select the correct type.</li>
+                                    <li>Credits: Classes are usually 1 credit. However, make sure to change this value because high school class credits can sometimes range from 0.5 to 2.0</li>
+                                    <li>Grade: Input the grade of the respective course.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Adding Courses Info (Sub-Section 1.4) -->
+                            <div id="adding_courses_1-4">
+                                <h5>Adding Courses</h5>
+                                <ol>
+                                    <li>Click the "Add Course" button to add a new row for entering information about an additional course.</li>
+                                    <li>Fill in the details for the new course in the generated row.</li>
+                                </ol>
+                            </div>
+
+                            <!-- Deleting Courses Info (Sub-Section 1.5) -->
+                            <div id="deleting_courses_1-5">
+                                <h5>Deleting Courses</h5>
+                                <ol>
+                                    <li>Locate the "Delete" button next to the course you want to remove.</li>
+                                    <li>Click the "Delete" button to remove this course.</li>
+                                </ol>
+                            </div>
+
+                            <!-- Final GPAs Display Info (Sub-Section 1.6) -->
+                            <div id="final_gpa_display_1-6">
+                                <h5>Final GPA Display</h5>
+                                <p>You can view the final weighted and unweighted GPAs on the lefthand display area.</p>
+                                <ul>
+                                    <li>The calculated GPAs take into account the details of each course's type, credits, and grades.</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Help Menu Container -->
+<div class="row collapse pt-4 pb-2 justify-content-center" id="help_menu_container">
+    <!-- Help Menu Interface -->
+    <div class="col-6">
+        <div class="row">
+            <!-- Help Menu Button -->
+            <div class="bg-primary border border-primary bg-opacity-10 rounded-4 text-center py-3" >
+                <button class="btn rounded-4" data-bs-toggle="collapse" data-bs-target="#help_menu_content"> <h1>Help Menu</h1> </button> 
+            </div>
+        </div>
+
+        <div class="row pt-2">
+            <!-- Collapsible Help Menu Content -->
+            <div class="bg-primary border border-primary bg-opacity-10 rounded-5 text-start collapse" id="help_menu_content">
+                <h5 class="mt-3"> > Hello! What can I help you with?</h4>
+                
+                <div class="row justify-content-center">
+                    <!-- Dropdown for the First Choice Help Menu Options -->
+                    <div class="col-8 text-center" >
+                        <select class="form-select m-2" id="help_first_choice">
+                            <option value="" selected>Nothing!</option>
+                            <option value="Final GPA Display">Final GPA Display</option>
+                            <option value="Current GPA/Credits">Current GPA/Credits</option>
+                            <option value="Course Info Input">Course Info Input</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Container for Second Choice Content -->
+                <div id="help_second_choice">
+                </div>
+
+                <!-- Help Menu Reset Button -->
+                <div class="row justify-content-center">
+                    <div class="col-4 text-center">
+                        <button class="btn btn-outline-danger my-3" onclick="resetHelpMenu()">Reset</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- GPA Calculation Interface -->
+<div class="container text-center py-3" style="width: 85%;">
+    
+    <div class="row" id="gpa_calc_interface">
+
+        <!-- Final GPA Display -->
+        <div class="container col-3 border border-primary rounded-5 bg-primary bg-opacity-10 pt-2">
+            <div class="container">
+                <div class="row border-bottom border-black border-3">
+                    <div class="col">
+                        <h1>GPA</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weighted GPA Display-->
+            <div class="container text-start" >
+                <div class="container border-bottom">
+                    <div class="row pt-3">
+                        <div class="col text-body-secondary">
+                            <h5 class="fs-4"><strong>Weighted</strong></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="final_weighted_gpa" class="col font-monospace fs-5">
+                            0.00
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row py-2"></div> <!-- Spacing -->
+
+                <!-- Unweighted GPA Display-->
+                <div class="container border-bottom">
+                    <div class="row pt-1">
+                        <div class="col text-body-secondary">
+                            <h5 class="fs-4"><strong>Unweighted</strong></h5>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div id="final_unweighted_gpa" class="col font-monospace fs-5">
+                            0.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Interface -->
+        <div class="col-9">
+
+            <!-- Current GPA Input -->
+            <div class="container">
+                <div class="row border border-primary p-1 rounded-4 bg-primary bg-opacity-10 mb-2">
+                    <form method="" action="">
+                        <div class="input-group">
+                            <!-- Current Weighted GPA Input -->
+                            <span class="input-group-text"><strong>Current Weighted GPA</strong></span>
+                            <input id="current_weighted_gpa_input_id" type="number" min="0" step="0.01" class="form-control" name="current_weighted_gpa_input" placeholder="Optional" >
+                        </div> 
+                    </form>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row border border-primary p-1 rounded-4 bg-primary bg-opacity-10 mb-2">
+                    <div class="input-group">
+                        <!-- Current Unweighted GPA Input-->
+                        <span class="input-group-text"><strong>Current Unweighted GPA</strong></span>
+                        <input id="current_unweighted_gpa_input_id" type="number" min="0" step="0.01" class="form-control" name="current_unweighted_gpa_input" placeholder="Optional" >
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Current Total Credits Container (Added through Javascript Application)-->
+            <div id="total_credit_form_container">    
+            </div>
+
+            <!-- Course Info Input Interface -->
+            <div class="container text-start border border-primary rounded-4 bg-primary bg-opacity-10">
+
+                <!-- Course Heading Row -->
+                <div class="row pt-1 pb-1">
+                    <div class="col-3">Course Name</div>
+                    <div class="col-2">Course Type</div>
+                    <div class="col-2">Credits</div>
+                    <div class="col-3">Grade</div>
+                    <div class="col-2"></div>
+                </div>
+
+                <!-- Input Rows -->
+                <div id="input_rows_group" >
+
+                    <!-- Course 1 -->
+                    <div class="row" id="course_row_1">
+                        
+                        <!-- Course Name Input Form -->
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="course_name_input_1" placeholder="e.g. Math">
+                        </div>
+
+                        <!-- Course Type Selection Form -->
+                        <div class="col-2">
+                            <select id="course_type_input_1" class="form-select" aria-label="Course Type Selection">
+                                <option value="Regular">Regular</option>
+                                <option value="AP">AP</option>
+                                <option value="Dual">Dual</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Credits Selection Form -->
+                        <div class="col-2">
+                            <select id="course_credit_input_1" class="form-select" aria-label="Credit Selection">
+                                <option value="0.5">0.5</option>
+                                <option value="1" selected>1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Grade Input Form-->
+                        <div class="col-3">
+                            <input type="number" class="form-control" id="course_grade_input_1" min="0" step="0.01" placeholder="(0.00 - 100.00)">
+                        </div>
+
+                        <!-- Delete Button Container (Empty because it is First Row) -->
+                        <div class="col-2">
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="row pt-2" id="course_row_2">
+
+                        <!-- Course Name Input Form -->
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="course_name_input_2">
+                        </div>
+
+                        <!-- Course Type Selection Form -->
+                        <div class="col-2">
+                            <select class="form-select" aria-label="Course Type Selection" id="course_type_input_2">
+                                <option value="Regular">Regular</option>
+                                <option value="AP">AP</option>
+                                <option value="Dual">Dual</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Credits Selection Form -->
+                        <div class="col-2">
+                            <select id="course_credit_input_2" class="form-select" aria-label="Credit Selection">
+                                <option value="0.5">0.5</option>
+                                <option value="1" selected>1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Grade Input Form-->
+                        <div class="col-3">
+                            <input type="number" min="0" step="0.01" class="form-control" id="course_grade_input_2">
+                        </div>
+
+                        <!-- Delete Button -->
+                        <div class="col-2">
+                            <button id="delete_button_2" type="button" class="btn btn-outline-danger">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="row pt-2" id="course_row_3">
+
+                        <!-- Course Name Input Form -->
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="course_name_input_3">
+                        </div>
+
+                        <!-- Course Type Selection Form -->
+                        <div class="col-2">
+                            <select class="form-select" id="course_type_input_3" aria-label="Course Type Selection">
+                                <option value="Regular">Regular</option>
+                                <option value="AP">AP</option>
+                                <option value="Dual">Dual</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Credits Selection Form -->
+                        <div class="col-2">
+                            <select id="course_credit_input_3" class="form-select" aria-label="Credit Selection">
+                                <option value="0.5">0.5</option>
+                                <option value="1" selected>1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Grade Input Form-->
+                        <div class="col-3">
+                            <input type="number" min="0" step="0.01" class="form-control" id="course_grade_input_3" >
+                        </div>
+
+                        <!-- Delete Button -->
+                        <div class="col-2">
+                            <button type="button" id="delete_button_3" class="btn btn-outline-danger" >Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="row pt-2" id="course_row_4">
+
+                        <!-- Course Name Input Form -->
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="course_name_input_4">
+                        </div>
+
+                        <!-- Course Type Selection Form -->
+                        <div class="col-2">
+                            <select class="form-select" id="course_type_input_4" aria-label="Course Type Selection">
+                                <option value="Regular">Regular</option>
+                                <option value="AP">AP</option>
+                                <option value="Dual">Dual</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Credits Selection Form -->
+                        <div class="col-2">
+                            <select id="course_credit_input_4" class="form-select" aria-label="Credit Selection">
+                                <option value="0.5">0.5</option>
+                                <option value="1" selected>1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Grade Input Form-->
+                        <div class="col-3">
+                            <input type="number" min="0" step="0.01" class="form-control" id="course_grade_input_4">
+                        </div>
+
+                        <!-- Delete Button -->
+                        <div class="col-2">
+                            <button type="button" id="delete_button_4" class="btn btn-outline-danger" >Delete</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add Course Button -->
+                <div class="row pt-2 pb-2 pe-5 ps-5">
+                    <button type="button" id="add_course_button" class="btn btn-outline-primary">Add Course</button>
+                </div>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+<script type="application/javascript">
+
+    // Selects multiple HTML elements using their ID's
+
+    // Selects the theme select input located in the navigation
+    let themeSelect = document.querySelector('#theme_select_input');
+
+    // Selects the final gpa display values
+    let finalWeightedGPA = document.querySelector('#final_weighted_gpa');
+    let finalUnweightedGPA = document.querySelector('#final_unweighted_gpa');
+
+    // Selects the current weighted and unweighted gpa inputs
+    let currentWeightedGPAInput = document.querySelector('#current_weighted_gpa_input_id');
+    let currentUnweightedGPAInput = document.querySelector('#current_unweighted_gpa_input_id');
+
+    // Selects the current total credits input
+    let currentTotalCreditsInput = document.querySelector('#total_credit_form_container');
+
+    // Selects the entire course input interface
+    let courseInputInterface = document.querySelector('#input_rows_group');
+    
+    // Selects the add course button
+    let addCourseButton = document.querySelector('#add_course_button');
+
+    // Selects the help menu choice selectors
+    let helpFirstChoiceInput = document.querySelector('#help_first_choice');
+    let helpSecondChoiceInput = document.querySelector('#help_second_choice');
+
+    // Establishes the initial number of courses present as 4
+    let numCourse = 4;
+
+    // Establishes counter as 0
+    // Used to calculate whether the Current Total Credit Input Form should be displayed based on whether there is an input in the current gpa forms
+    let totalCreditInitial = 0;
+
+    // Establishes the current total credit input amount as 0
+    let currentTotalCreditsInputValue = 0;  
+
+    // Establishes the final gpa values as 0
+    let finalUnweightedGPAValue = 0;
+    let finalWeightedGPAValue = 0;
+
+    // Establishs the help_menu's second choice inner html as non-existent
+    let secondChoice = '';
+
+    // All Course Data Stored In This Array
+    let addedCourses = [];
+    
+
+    // Event listener when the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all the navigation links
+        const navLinks = document.querySelectorAll('#guide_contents a');
+
+        // Add click event listener to each navigation link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Get the target section ID from the href attribute
+                const targetId = this.getAttribute('href').substring(1);
+
+                // Get the target section element
+                const targetElement = document.getElementById(targetId);
+
+                // Scroll to the target element smoothly
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest', // Aligns to the nearest method of viewing the element in the scrolling container (inner instructions)
+                });
+            });
+        });
+
+        // Get all the navigation links
+        const helpLinks = document.querySelectorAll('#help_menu_content a');
+
+        // Add click event listener to each navigation link
+        helpLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Get the target section ID from the href attribute
+                const targetId = this.getAttribute('href').substring(1);
+
+                // Get the target section element
+                const targetElement = document.getElementById(targetId);
+
+                // Scroll to the target element smoothly
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'nearest' 
+                });
+            });
+        });
+
+
+
+    });
+
+
+    // Function to calculate the final weighted GPA
+    function finalWeightedGPACalculation() {
+        // Establishes the total credits used in the weighted calcuation as 0 and the total weighted grade as 0
+        let totalWeightedCredits = 0;
+        let totalWeightedGrade = 0;
+
+        // Loop through each course and accumulate total weighted grade numerical value
+        for (let i = 0; i < numCourse; i++) {
+            if (addedCourses[i].gradeInputId[2] != null) {
+                totalWeightedGrade += addedCourses[i].gradeInputId[2];
+            }
+        }
+        // Add current total weighted GPA numerical value multiplied by total credits
+        totalWeightedGrade += currentWeightedGPAInput.value * (currentTotalCreditsInputValue || 1); 
+        
+        // Loop through each course and accumulate total number of credits
+        for (let i = 0; i < numCourse; i++) {
+            if (addedCourses[i].creditSelectId[1] != null) {
+                if (addedCourses[i].gradeInputId[2] != null) {
+                    totalWeightedCredits += addedCourses[i].creditSelectId[1];
+                }
+            }
+        }
+        
+        // Adds the current total credits to the total number of credits
+        if (currentWeightedGPAInput.value != undefined && currentWeightedGPAInput.value != 0) {
+            totalWeightedCredits += (currentTotalCreditsInputValue || 1);
+        }
+
+        // Calculates the final weighted GPA by dividing the total weighted grade by the total number of credits
+        finalWeightedGPAValue = ((totalWeightedGrade / totalWeightedCredits).toFixed(2) || 0.00);
+
+        // Displays the final weighted GPA
+        finalWeightedGPA.innerHTML = "" + finalWeightedGPAValue;
+
+        // Handle the case where the calculated GPA is NaN
+        if (finalWeightedGPA.innerHTML == "NaN") {
+            finalWeightedGPA.innerHTML = "0.00";
+        }
+    }
+
+    // Function to calculate the final unweighted GPA
+    function finalUnweightedGPACalculation() {
+        // Establishes the total credits used in the unweighted calcuation as 0 and the total unweighted grade as 0
+        let totalUnweightedCredits = 0;
+        let totalUnweightedGrade = 0;
+
+        // Loop through each course and accumulate total unweighted grade numerical value
+        for (let i = 0; i < numCourse; i++) {
+            if (addedCourses[i].gradeInputId[1] != null) {
+                totalUnweightedGrade += addedCourses[i].gradeInputId[1];
+            }
+        }
+        // Add current total unweighted GPA numerical value multiplied by total credits
+        totalUnweightedGrade += currentUnweightedGPAInput.value * (currentTotalCreditsInputValue || 1); 
+        
+        // Loop through each course and accumulate total number of credits
+        for (let i = 0; i < numCourse; i++) {
+            if (addedCourses[i].creditSelectId[1] != null) {
+                if (addedCourses[i].gradeInputId[1] != null) {
+                    totalUnweightedCredits += addedCourses[i].creditSelectId[1];
+                }
+            }
+        }
+        // Adds the current total credits to the total number of credits
+        if (currentUnweightedGPAInput.value != undefined && currentUnweightedGPAInput.value != 0) {
+            totalUnweightedCredits += (currentTotalCreditsInputValue || 1);
+        } 
+
+        // Calculates the final unweighted GPA by dividing the total unweighted grade by the total number of credits
+        finalUnweightedGPAValue = ((totalUnweightedGrade / totalUnweightedCredits).toFixed(2) || 0.00);
+
+        // Displays the final unweighted GPA
+        finalUnweightedGPA.innerHTML = "" + finalUnweightedGPAValue;
+
+        // Handle the case where the calculated GPA is NaN
+        if (finalUnweightedGPA.innerHTML == "NaN") {
+            finalUnweightedGPA.innerHTML = "0.00";
+        }
+        
+    }
+
+
+    // Function to add the initial rows to the addedCourses data structure
+    function addInitialCourses() {
+
+        // Loop through each of the 4 initial courses
+        for (let i = 1; i <= numCourse; i++) {
+            // Generate IDs for each course element
+            const rowId = `course_row_${i}`;
+            const nameInputId = `course_name_input_${i}`;
+            const typeSelectId = `course_type_input_${i}`;
+            const creditSelectId = `course_credit_input_${i}`;
+            const gradeInputId = `course_grade_input_${i}`;
+            const deleteButtonId = `delete_button_${i}`;
+
+            // Create an initial course object
+            const initialCourse = {
+                id: rowId,
+                nameInputId: [nameInputId, null],
+                typeSelectId: [typeSelectId, 'Regular'],
+                creditSelectId: [creditSelectId, 1],
+                gradeInputId: [gradeInputId, null, null],
+                deleteButtonId: deleteButtonId
+            };
+            // Add the course to the addedCourses array
+            addedCourses.push(initialCourse);
+        }
+    }
+
+    // Function to add the current weighted GPA input
+    function addCurrentWeightedGPA(event) {
+
+        // Parse the current weighted gpa input value as a decimal
+        let currentWeightedGPAInputValue = parseFloat(event.target.value); 
+
+        // Check if the input is a valid number between 0 and 5
+        // Applies input validation on both syntactical and semantic levels
+        if (currentWeightedGPAInputValue > 5) {
+            currentWeightedGPAInputValue = 5;
+            currentWeightedGPAInput.value = currentWeightedGPAInputValue;
+        } 
+
+        if (currentWeightedGPAInputValue < 0) {
+            currentWeightedGPAInputValue = 0;
+            currentWeightedGPAInput.value = currentWeightedGPAInputValue;
+        } 
+
+        
+
+        // Calls the function to Display the Current Total Credits Input Form
+        addCurrentTotalCredits();
+        
+        // Recalculates the final weighted gpa
+        finalWeightedGPACalculation();
+    }
+
+    // Function to add the current unweighted GPA input
+    function addCurrentUnweightedGPA(event) {
+
+        // Parse the current unweighted gpa input value as a decimal
+        let currentUnweightedGPAInputValue = parseFloat(event.target.value);
+
+        // Check if the input is a valid number between 0 and 5
+        // Applies input validation on both syntactical and semantic levels
+        if (currentUnweightedGPAInputValue > 4) {
+            currentUnweightedGPAInputValue = 4;
+            currentUnweightedGPAInput.value = currentUnweightedGPAInputValue;
+        }
+        
+        if (currentUnweightedGPAInputValue < 0) {
+            currentUnweightedGPAInputValue = 0;
+            currentUnweightedGPAInput.value = currentUnweightedGPAInputValue;
+        } 
+
+        // Calls the function to Display the Current Total Credits Input Form
+        addCurrentTotalCredits();
+        
+        // Recalculates the final unweighted gpa
+        finalUnweightedGPACalculation();
+    }
+
+    // Function to add the current total credits input
+    function addCurrentTotalCredits() {
+
+        // Checks to see if there is an inputted value in either current gpa input form
+        if (currentWeightedGPAInput.value != 0 || currentUnweightedGPAInput.value != 0) {
+            totalCreditInitial++;
+        } else if (currentWeightedGPAInput.value == 0 && currentUnweightedGPAInput.value == 0) {
+            totalCreditInitial = 0;
+        }
+
+        // If there is a inputted value in either form, the current total credit input form will be displayed
+        if (totalCreditInitial == 1) {
+
+            // Create a new div element
+            const newTotalCreditsRow = document.createElement('div');
+            newTotalCreditsRow.className = 'container';
+            newTotalCreditsRow.id = 'total_credits_input';
+
+            // Update the HTML content with the form
+            newTotalCreditsRow.innerHTML = 
+                `<div class="row border border-primary p-1 rounded-4 bg-primary bg-opacity-10 mb-2">
+                    <div class="input-group">
+                        <span class="input-group-text"><strong>Current Total Credits</strong></span>
+                        <input id="current_total_credits_input_id" type="number" min="0" step="0.5" class="form-control" name="current_total_credits_input" placeholder="Reccomended for Accurate Calculations" >
+                    </div> 
+                </div>`;
+
+            // Append the new row to the total_credit_form_container
+            document.getElementById('total_credit_form_container').appendChild(newTotalCreditsRow);
+        } else if (totalCreditInitial == 0) {
+
+            // Removes the form if no value has been inputted into the current gpas
+            const totalCreditFormElement = document.getElementById('total_credits_input');
+            if (totalCreditFormElement) {
+                totalCreditFormElement.remove();
+            }
+        }
+
+    }
+
+
+    // Function updates the value of the respective Course Name
+    function addCourseName(id, inputValue) {
+        
+        // Gets the respective course Id number to update 
+        const indexToUpdate = addedCourses.findIndex(course => course.nameInputId[0] == id);
+        
+        // Updates the value of the course name
+        addedCourses[indexToUpdate].nameInputId.splice(1, 1, inputValue);
+
+    }
+
+    // Function updates the value of the respective Course Type
+    function addCourseType(id, inputValue) {
+
+        // Gets the respective course Id number to update 
+        const indexToUpdate = addedCourses.findIndex(course => course.typeSelectId[0] == id);
+
+        // Updates the value of the course type
+        addedCourses[indexToUpdate].typeSelectId.splice(1, 1, inputValue);
+
+    }
+
+    // Function updates the value of the respective Course Credit
+    function addCourseCredit(id, inputValue) {
+
+        // Gets the respective course Id number to update 
+        const indexToUpdate = addedCourses.findIndex(course => course.creditSelectId[0] == id);
+
+        // Updates the value of the course credits
+        addedCourses[indexToUpdate].creditSelectId.splice(1, 1, parseFloat(inputValue));
+
+    }
+
+    // Function updates the value of the respective Course Grade
+    function addCourseGrade(id, inputValue) {
+
+        // Gets the respective course Id number to update 
+        const indexToUpdate = addedCourses.findIndex(course => course.gradeInputId[0] == id);
+
+        // Establishes the respective course type input id
+        const courseType = document.querySelector(`#course_type_input_${id.substr(19)}`);
+
+        // Establishs the respective course credit input id
+        const courseCredit = document.querySelector(`#course_credit_input_${id.substr(19)}`);
+
+        // Establishes the Scaled Grade as null
+        let inputValueScaled = null;
+
+        // Checks the inputted grade value and converts it on Denmark High School's Unweighted Scale Chart
+        if (inputValue == null) {
+            inputValueScaled = null;
+        } else if (inputValue >= 89.5) {
+            inputValueScaled = 4;
+        }
+        else if (inputValue >= 79.5) {
+            inputValueScaled = 3;
+        }
+        else if (inputValue >= 69.5) {
+            inputValueScaled = 2;
+        }
+        else if (inputValue >= 59.5) {
+            inputValueScaled = 1;
+        }
+        else if (inputValue < 59.5) {
+            inputValueScaled = 0;
+        }
+        
+        
+        // Updates the value of the Unweighted Course Grade in the addedCourse data structure as a scaled grade
+        if (inputValueScaled != null) {
+            addedCourses[indexToUpdate].gradeInputId.splice(1, 1, (inputValueScaled * courseCredit.value));
+        } else {
+            addedCourses[indexToUpdate].gradeInputId.splice(1, 1, inputValueScaled);
+        }
+
+        // If the inputted value has it's respective course type as AP or Dual it will convert the grade using Denmark High School's Weighted Scale
+        if (courseType.value == 'AP' || courseType.value == 'Dual') {
+
+            if (inputValue == null) {
+                inputValueScaled = null;
+            } else if (inputValue >= 89.5) {
+                inputValueScaled = 5;
+            }
+            else if (inputValue >= 79.5) {
+                inputValueScaled = 4;
+            }
+            else if (inputValue >= 69.5) {
+                inputValueScaled = 3;
+            }
+            else if (inputValue >= 59.5) {
+                inputValueScaled = 2;
+            }
+            else if (inputValue < 59.5) {
+                inputValueScaled = 1;
+            }
+     
+        }
+
+        // Updates the value of the Weighted Course grade
+        if (inputValueScaled != null) {
+            addedCourses[indexToUpdate].gradeInputId.splice(2, 1, (inputValueScaled * courseCredit.value));
+        } else {
+            addedCourses[indexToUpdate].gradeInputId.splice(2, 1, inputValueScaled);
+        }
+        
+    }
+
+
+    // Function to delete a course row
+    function deleteCourse(rowId) {
+        // Get the index of the course to delete
+        const indexToDelete = addedCourses.findIndex(course => course.id === rowId);
+        
+        // Remove the course from the array
+        if (indexToDelete !== -1) {
+            addedCourses.splice(indexToDelete, 1);
+        }
+
+        // Remove the corresponding HTML row
+        const rowElement = document.getElementById(rowId);
+        if (rowElement) {
+            rowElement.remove();
+            numCourse--;
+
+            // Update IDs for remaining rows
+            addedCourses.forEach((course, index) => {          
+
+                const updatedCourseId = document.getElementById(course.id);
+                const updatedCourseNameId = document.getElementById(course.nameInputId[0]);
+                const updatedCourseTypeId = document.getElementById(course.typeSelectId[0]);
+                const updatedCourseCreditId = document.getElementById(course.creditSelectId[0]);
+                const updatedCourseGradeId = document.getElementById(course.gradeInputId[0]);
+                const updatedCourseDeleteId = document.getElementById(course.deleteButtonId);
+
+                updatedCourseId.id = `course_row_${index + 1}`;
+                updatedCourseNameId.id = `course_name_input_${index + 1}`;
+                updatedCourseTypeId.id = `course_type_input_${index + 1}`;
+                updatedCourseCreditId.id = `course_credit_input_${index + 1}`;
+                updatedCourseGradeId.id = `course_grade_input_${index + 1}`;
+                if (index != 0) {updatedCourseDeleteId.id = `delete_button_${index + 1}`;}
+                
+                    
+                // Updates addedCourses array with the updated IDs
+                addedCourses[index].id = `course_row_${index + 1}`;
+                addedCourses[index].nameInputId[0] = `course_name_input_${index + 1}`;
+                addedCourses[index].typeSelectId[0] = `course_type_input_${index + 1}`;
+                addedCourses[index].creditSelectId[0] = `course_credit_input_${index + 1}`;
+                addedCourses[index].gradeInputId[0] = `course_grade_input_${index + 1}`;
+                if (index != 0) {addedCourses[index].deleteButtonId = `delete_button_${index + 1}`;}
+
+                
+            });
+        }
+
+    }
+
+
+    // Current Weighted GPA Event Listener
+    // Calls the current weighted gpa function everytime event occurs in order to dynamically update data structure and final gpa display
+    currentWeightedGPAInput.addEventListener("keyup", function (event) { addCurrentWeightedGPA(event); });
+    currentWeightedGPAInput.addEventListener("click", function (event) { addCurrentWeightedGPA(event); });
+
+    // Current Unweighted GPA Event Listener
+    // Calls the current unweighted gpa function everytime event occurs in order to dynamically update data structure and final gpa display
+    currentUnweightedGPAInput.addEventListener("keyup", function (event) { addCurrentUnweightedGPA(event); });
+    currentUnweightedGPAInput.addEventListener("click", function (event) { addCurrentUnweightedGPA(event); });
+
+
+    // Event Listener for a keyboard on the Total Current Credits
+    currentTotalCreditsInput.addEventListener("keyup", function (event) {
+
+        currentTotalCreditsInputValue = parseFloat(event.target.value);
+
+        // Ensures the current total credits input is not negative
+        if (currentTotalCreditsInputValue < 0) {
+            currentTotalCreditsInputValue = 0;
+            event.target.value = currentTotalCreditsInputValue;
+        }
+
+        // Call both GPA Calculation Functions in order to dynamically calculate and update the displays
+        finalWeightedGPACalculation();
+        finalUnweightedGPACalculation();
+
+    });
+
+    // Event Listener for a mouse input on the Total Current Credits
+    currentTotalCreditsInput.addEventListener("click", function (event) {
+
+        currentTotalCreditsInputValue = parseFloat(event.target.value);
+
+        // Ensures the current total credits input is not negative
+        if (currentTotalCreditsInputValue < 0) {
+            currentTotalCreditsInputValue = 0;
+            currentTotalCreditsInput.value = currentTotalCreditsInputValue;
+        }
+
+        // Call both GPA Calculation Functions in order to dynamically calculate and update the displays
+        finalWeightedGPACalculation();
+        finalUnweightedGPACalculation();
+
+});
+
+
+    // Event listener for any input given on any course that requires a keyboard input
+    courseInputInterface.addEventListener("keyup", function (event) {
+
+        // Checks if the inputted value is respective to the Course Name column
+        if ((event.target.id).substr(0,11) == 'course_name') {
+
+            // Calls function to update the value of the Course Name
+            addCourseName(event.target.id, event.target.value);
+
+        }
+
+        // Checks if the inputted value is respective to the Course Grade column
+        if ((event.target.id).substr(0,12) == 'course_grade') {
+
+            let courseGradeValue = parseFloat(event.target.value);
+
+            // Makes the course grade a decimal up to two places
+            courseGradeValue = courseGradeValue.toFixed(2);
+
+            // Check if the input is a valid number between 0 and 100
+            // Applies input validation on both syntactical and semantic levels
+            if (courseGradeValue > 100) {
+                courseGradeValue = 100;
+                event.target.value = courseGradeValue;
+            } 
+
+            if (courseGradeValue < 0) {
+                courseGradeValue = 0;
+                event.target.value = courseGradeValue;
+            } 
+
+            if (event.target.value === '') {
+                courseGradeValue = null;
+            }
+
+            // Calls function to update the value of the Course Grade
+            addCourseGrade(event.target.id, courseGradeValue);
+
+        }
+
+        // Call both GPA Calculation Functions in order to dynamically calculate and update the displays
+        finalWeightedGPACalculation();
+        finalUnweightedGPACalculation();
+
+    });
+
+    // Event Listener for any input that needs the mouse
+    courseInputInterface.addEventListener("click", function (event) {
+
+        // Checks if the clicked value is respective to the Course Type column
+        if ((event.target.id).substr(0,11) == 'course_type') {
+
+            // Collects course grade id for respective row
+            let tempGradeVal = document.querySelector('#course_grade_input_' + event.target.id.substr(18));
+
+            // Calls function to update the value of the Course Type
+            addCourseType(event.target.id, event.target.value);
+            
+            // Calls function to update the value of the Course Grade
+            addCourseGrade('course_grade_input_' + event.target.id.substr(18), tempGradeVal.value);
+
+            // Handles case where no value has been typed in course grade
+            if (tempGradeVal.value === '') {
+                tempGradeVal = null;
+
+                // Calls function to update the value of the Course Grade
+                addCourseGrade('course_grade_input_' + event.target.id.substr(18), tempGradeVal);
+            }
+
+        }
+
+        // Checks if the clicked value is respective to the Course Credits column
+        if ((event.target.id).substr(0,13) == 'course_credit') {
+
+             // Collects course grade id for respective row
+            tempGradeVal = document.querySelector('#course_grade_input_' + event.target.id.substr(20));
+
+            // Calls function to update the value of the Course Credits
+            addCourseCredit(event.target.id, event.target.value);
+
+            // Calls function to update the value of the Course Grade
+            addCourseGrade('course_grade_input_' + event.target.id.substr(20), tempGradeVal.value);
+            
+            // Handles case where no value has been typed in course grade
+            if (tempGradeVal.value === '') {
+                tempGradeVal = null;
+
+                // Calls function to update the value of the Course Grade
+                addCourseGrade('course_grade_input_' + event.target.id.substr(20), tempGradeVal);
+            }
+
+        }
+
+        // Checks if the inputted value is respective to the Course Grade column
+        if ((event.target.id).substr(0,12) == 'course_grade') {
+
+            let courseGradeValue = parseFloat(event.target.value);
+
+            // Makes the course grade a decimal up to two places
+            courseGradeValue = courseGradeValue.toFixed(2);
+
+            // Check if the input is a valid number between 0 and 100
+            // Applies input validation on both syntactical and semantic levels
+            if (courseGradeValue > 100) {
+                courseGradeValue = 100;
+                event.target.value = courseGradeValue;
+            } 
+
+            if (courseGradeValue < 0) {
+                courseGradeValue = 0;
+                event.target.value = courseGradeValue;
+            } 
+
+            if (event.target.value === '') {
+                courseGradeValue = null;
+            }
+
+            // Calls function to update the value of the Course Grade
+            addCourseGrade(event.target.id, courseGradeValue);
+
+        }
+
+        // Checks if the clicked value is respective to a delete button
+        if ((event.target.id).substr(0,13) == 'delete_button') {
+
+            // Calls the Delete Button Function
+            // Passes Argument as a rowID with the respective deletebutton ID number
+            deleteCourse(`course_row_${(event.target.id).substr(14)}`);
+
+        }
+
+        // Call both GPA Calculation Functions in order to dynamically calculate and update the displays
+        finalWeightedGPACalculation();
+        finalUnweightedGPACalculation();
+
+    });
+
+
+    // Adds a row to input another course
+    addCourseButton.addEventListener("click", function (event) {
+        // Increment the number of courses
+        numCourse++;
+
+        // Generate unique IDs for the new row
+        const rowId = `course_row_${numCourse}`;
+        const nameInputId = `course_name_input_${numCourse}`;
+        const typeSelectId = `course_type_input_${numCourse}`;
+        const creditSelectId = `course_credit_input_${numCourse}`;
+        const gradeInputId = `course_grade_input_${numCourse}`;
+        const deleteButtonId = `delete_button_${numCourse}`;
+
+        // Create a new course object and add it to the array
+        const newCourse = {
+            id: rowId,
+            nameInputId: [nameInputId, null],
+            typeSelectId: [typeSelectId, 'Regular'],
+            creditSelectId: [creditSelectId, 1],
+            gradeInputId: [gradeInputId, null, null],
+            deleteButtonId: deleteButtonId
+        };
+        addedCourses.push(newCourse);
+
+        // Create a new div element
+        const newRow = document.createElement('div');
+        newRow.className = 'row pt-2';
+        newRow.id = rowId;
+
+        // Update the HTML content with the new row
+        newRow.innerHTML = 
+            `<div class="col-3">
+                <input type="text" class="form-control" id="${nameInputId}">
+            </div>
+            <div class="col-2">
+                <select id="${typeSelectId}" class="form-select" aria-label="Course Type Selection">
+                    <option value="Regular">Regular</option>
+                    <option value="AP">AP</option>
+                    <option value="Dual">Dual</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select id="${creditSelectId}" class="form-select" aria-label="Credit Selection">
+                    <option value="0.5">0.5</option>
+                    <option value="1" selected>1</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <input type="number" min="0" step="0.01" class="form-control" id="${gradeInputId}">
+            </div>
+            <div class="col-2">
+                <button type="button" id="${deleteButtonId}" class="btn btn-outline-danger" ">Delete</button>
+            </div>`;
+
+            // Append the new row to the input_rows_group
+        document.getElementById('input_rows_group').appendChild(newRow);
+
+    });
+
+
+    // Event listener for what the help menu first choice select form has been clicked
+    helpFirstChoiceInput.addEventListener("click", function (event) {
+
+        const secondChoiceContainer = document.querySelector('#help_second_choice')
+
+        if (event.target.value == 'Final GPA Display') {
+            secondChoiceContainer.innerHTML = `<h6> > Which GPA value display is it?</h6>
+                    <div class="row justify-content-center">
+                        <button class="col-5 btn btn-primary m-2" id="weighted_display_choice">Weighted</button>
+                        <button class="col-5 btn btn-primary m-2" id="unweighted_display_choice">Unweighted</button>
+                        <button class="col-5 btn btn-primary m-2" id="both_display_choice">Both</button>
+                    </div>`
+        } else if (event.target.value == 'Current GPA/Credits') {
+            secondChoiceContainer.innerHTML = `<h6> > Which input section is it?</h6>
+                    <div class="row justify-content-center">
+                        <button class="col-5 btn btn-primary m-2" id="current_weighted_choice">Weighted</button>
+                        <button class="col-5 btn btn-primary m-2" id="current_unweighted_choice">Unweighted</button>
+                        <button class="col-5 btn btn-primary m-2" id="current_credits_choice">Credits</button>
+                        <button class="col-5 btn btn-primary m-2" id="current_all_choice">All</button>
+                    </div>`
+        } else if (event.target.value == 'Course Info Input') {
+            secondChoiceContainer.innerHTML = `<h6> > Which section are you having trouble with?</h6>
+                    <div class="row justify-content-center">
+                        <button class="col-5 btn btn-primary m-2" id="course_name_choice">Course Name</button>
+                        <button class="col-5 btn btn-primary m-2" id="course_type_choice">Course Type</button>
+                        <button class="col-5 btn btn-primary m-2" id="course_credits_choice">Course Credits</button>
+                        <button class="col-5 btn btn-primary m-2" id="course_grade_choice">Course Grade</button>
+                        <button class="col-5 btn btn-primary m-2" id="course_all_choice">All</button>
+                    </div>`
+        } else if (event.target.value == '') {
+            secondChoiceContainer.innerHTML = "";
+            
+        }
+    })
+
+    // Event listener for what the help menu second choice button form has been clicked
+    helpSecondChoiceInput.addEventListener("click", function (event) {
+        console.log(event.target.id);
+        const secondChoiceContainer = document.querySelector('#help_second_choice');
+
+        if (event.target.id == 'weighted_display_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>After inputting all your course grades and current GPA/credit values if you have them. Make sure to choose the correct course type in order to apply a weighted scale to your course grades. View Course Type Input specifications through the help menu for more information upon this topic.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator takes in these values and applies a weighted scale to each AP/Dual enrollment class. This means those classes would equate to a 5.0 instead of a 4.0. This affects the Final Weighted GPA Display Value.</li>
+                    </ul>`
+        } else if (event.target.id == 'unweighted_display_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>If you have a current unweighted GPA in your transcript, make sure to input this value at the top. Make sure to input all course grades accuratley in order to achieve a correct unweighted GPA display. View Course Grade Input specifications through the help menu for more information upon this topic.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The unwieghted GPA display, showcases your current unweighted GPA and inputted course grades calculated together on a 4.0 scale. View Course Grade Calculation specifications through the help menu for more information upon this topic.</li>
+                    </ul>`
+        } else if (event.target.id == 'both_display_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <ol>
+                        <li><strong>Weighted:</strong>
+                            <p>How to Input</p>
+                    <ul>
+                        <li>After inputting all your course grades and current GPA/credit values if you have them. Make sure to choose the correct course type in order to apply a weighted scale to your course grades. View Course Type Input specifications through the help menu for more information upon this topic.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator takes in these values and applies a weighted scale to each AP/Dual enrollment class. This means those classes would equate to a 5.0 instead of a 4.0. This affects the Final Weighted GPA Display Value.</li>
+                    </ul>
+                        </li>
+                        <li><strong>Unweighted:</strong> 
+                            <p>How to Input</p>
+                    <ul>
+                        <li>If you have a current unweighted GPA in your transcript, make sure to input this value at the top. Make sure to input all course grades accuratley in order to achieve a correct unweighted GPA display. View Course Grade Input specifications through the help menu for more information upon this topic.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The unwieghted GPA display, showcases your current unweighted GPA and inputted course grades calculated together on a 4.0 scale. View Course Grade Calculation specifications through the help menu for more information upon this topic.</li>
+                    </ul>
+                        </li>
+                    </ol>`
+        } else if (event.target.id == 'current_weighted_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input the current grades of your courses and provide information about the credit values for each class.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator takes into account the current course grades and credits to calculate the Weighted GPA, applying a weighted scale to relevant classes.</li>
+                    </ul>`;
+        } else if (event.target.id == 'current_unweighted_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input your current unweighted GPA from your transcript and accurately enter the grades for each of your courses.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator displays your unweighted GPA, calculated by considering the inputted course grades on a 4.0 scale.</li>
+                    </ul>`;
+        } else if (event.target.id == 'current_credits_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input the current credit values for each course you are taking.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator uses the provided credit values to determine the overall GPA, considering the credit hours for each course.</li>
+                    </ul>`;
+        } else if (event.target.id == 'current_all_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input your current unweighted GPA, course grades, and credit values for a comprehensive calculation.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator provides a detailed analysis, incorporating both unweighted GPA and weighted GPA, using the provided course grades and credit values.</li>
+                    </ul>`;
+        } else if (event.target.id == 'course_name_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input the names of each of your courses.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator uses the provided course names as part of the input to identify and calculate the GPA for each course.</li>
+                    </ul>`;
+        } else if (event.target.id == 'course_type_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to select the correct course type for each of your courses (e.g., AP, Dual Enrollment).</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator uses the chosen course types to apply the appropriate weighted scale to the corresponding classes.</li>
+                    </ul>`;
+        } else if (event.target.id == 'course_credits_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input the credit values for each of your courses.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator uses the provided credit values to determine the overall GPA, considering the credit hours for each course.</li>
+                    </ul>`;
+        } else if (event.target.id == 'course_grade_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input the grades for each of your courses.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator uses the provided course grades to calculate the GPA, considering the grading scale for each class.</li>
+                    </ul>`;
+        } else if (event.target.id == 'course_all_choice') {
+            secondChoiceContainer.innerHTML = `<h6> > I hope this helps!</h6>
+                    <p>How to Input</p>
+                    <ul>
+                        <li>You have to input the names, types, credits, and grades for each of your courses.</li>
+                    </ul>
+                    <p>What it Does</p>
+                    <ul>
+                        <li>The calculator provides a comprehensive analysis, incorporating all inputted information for accurate GPA calculations.</li>
+                    </ul>`;
+        }
+    })
+
+
+    // Functino that resets the help menu
+    function resetHelpMenu() {
+        const secondChoiceContainer = document.querySelector('#help_second_choice')
+        secondChoiceContainer.innerHTML = ""
+        helpFirstChoiceInput.value = ''
+
+    }
+
+
+    // Functino that changes the theme of the application to dark mode
+    function darkSelect() {
+        const theme = document.querySelector("#theme")
+        theme.setAttribute('data-bs-theme', 'dark')
+        
+    }
+
+    // Functino that changes the theme of the application to light mode
+    function lightSelect() {
+        const theme = document.querySelector("#theme")
+        theme.setAttribute('data-bs-theme', 'light')
+    }
+
+
+    // Call the function to add initial rows when the page loads
+    addInitialCourses(); 
+
+
+</script>
+
+{% endblock %}
